@@ -1,0 +1,47 @@
+@version: 1;
+
+//colors
+@accent-color: #3EA800;
+@note: lighten(@accent-color, 40%);
+@error: #DE3E3E;
+@white: #fff;
+
+@blue: #1c84c6;
+@dark-blue: #1a7bb9;
+
+@turquoise: #1ab394;
+@dark-turquoise: #18a689;
+
+@heavenly: #23c6c8;
+@dark-heavenly: #21b9bb;
+
+@red: #ed5565;
+@dark-red: #ec4758;
+
+@yellow: #f8ac59;
+@dark-yellow: #f7a54a;
+
+@grey: #e7eaec;
+@dark-grey: #404040;
+@light-grey: #fafafa;
+
+//media variables
+
+@devices-large-desktop-min-width: 1824px;
+@devices-desktop-max-width:       (@devices-large-desktop-min-width - 1);
+@devices-desktop-min-width:       1024px;
+@devices-tablet-max-width:        (@devices-desktop-min-width - 1);
+@devices-tablet-min-width:        768px;
+@devices-mobile-max-width:        (@devices-tablet-min-width - 1);
+@devices-mobile-min-width:        320px;
+
+
+/* Large Desktop ----------- */
+@large-desktop: ~"only screen and (min-width : @{devices-large-desktop-min-width})";
+/* Desktop ----------- */
+@desktop: ~"only screen and (min-width : @{devices-desktop-min-width}) and (max-width : @{devices-desktop-max-width})";
+/* Tablets Portrait / Landscape ----------- */
+@tablet: ~"only screen and (min-width : @{devices-tablet-min-width}) and (max-width : @{devices-tablet-max-width})";
+/* Mobile ----------- */
+@mobile: ~"only screen and (min-width : @{devices-mobile-min-width}) and (max-width : @{devices-mobile-max-width})";
+

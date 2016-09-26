@@ -1,0 +1,23 @@
+@import "../global/variables";
+.c-header {
+  padding: 20px 10px 20px 10px;
+  border-bottom: 1px solid @grey;
+
+  &__title {
+    font-size: 13px;
+    color: @dark-grey;
+    font-weight: bold;
+    &--primary {
+
+    }
+    @media @mobile {
+      font-size: 12px;
+    }
+  }
+  @media @mobile {
+    padding: 5px;
+  }
+  @media @tablet {
+    padding: 10px;
+  }
+}

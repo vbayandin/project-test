@@ -1,0 +1,81 @@
+@import "../global/variables";
+
+.c-button {
+  display: inline-block;
+
+  padding: 6px 12px;
+  min-width: 120px;
+
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  background: @white;
+  border: 1px solid @grey;
+
+  &:hover {
+    background-color: @grey;
+  }
+
+  &--primary {
+    &:extend(.c-button);
+
+    background-color: @turquoise;
+    border-color: @turquoise;
+    color: @white;
+
+    &:hover {
+      background-color: @dark-turquoise;
+    }
+  }
+
+  &--success {
+    &:extend(.c-button);
+
+    background-color: @blue;
+    border-color: @blue;
+    color: @white;
+
+    &:hover {
+      background-color: @dark-blue;
+    }
+  }
+
+  &--info {
+    &:extend(.c-button);
+
+    background-color: @heavenly;
+    border-color: @dark-heavenly;
+    color: @white;
+
+    &:hover {
+      background-color: @dark-heavenly;
+    }
+  }
+
+  &--warning {
+    &:extend(.c-button);
+
+    background-color: @yellow;
+    border-color: @yellow;
+    color: @white;
+
+    &:hover {
+      background-color: @dark-yellow;
+    }
+  }
+
+  &--danger {
+    &:extend(.c-button);
+
+    background-color: @red;
+    border-color: @red;
+    color: @white;
+
+    &:hover {
+      background-color: @dark-yellow;
+    }
+  }
+
+}
+
+

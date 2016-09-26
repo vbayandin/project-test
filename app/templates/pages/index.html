@@ -1,0 +1,120 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  @@include('../partials/standard-head.html')
+  @@include('../partials/warning.html')
+</head>
+<body>
+@@include('../partials/browsehappy.html')
+@@include('../partials/javascript.html')
+
+@@include('../partials/header.html')
+<section class="l-wrap">
+  <article class="c-info">
+    <p>This is a simple project structure for promo-sites or multi-page applications. Provides a starter pack with
+      ready-to-use environment.</p>
+    <div class="c-info__note">NOTE: all run command need execute from a project root folder.</div>
+  </article>
+
+  <article class="c-info">
+    <h2 class="c-info__title">Features</h2>
+    <ul  class="c-info__content">
+      <li>VanillaJS based</li>
+      <li>jQuery-free <span class="c-info__note">(NOTE: jQuery can be added)</span></li>
+      <li>Uses LESS framework for stylesheets</li>
+      <li>Uses Bower as a package manager</li>
+      <li>Allows to get the release version of the project in one command <span class="c-info__note">(NOTE: configurable)</span>
+      </li>
+      <li>Has predefined 'you-have-old-browser' and 'javascript-is-disabled' pages</li>
+      <li>And many others!</li>
+    </ul>
+  </article>
+
+  <article  class="c-info">
+    <h3  class="c-info__title">Get started</h3>
+    <ol class="c-info__content">
+      <li>Checkout this repository to your hard drive</li>
+      <li>Download and install the latest version of <a href="http://nodejs.org">node.js</a></li>
+      <li>Run <b>npm install</b> to install node modules</li>
+      <li>Run <b>npm install -g gulp</b> to install gulp</li>
+      <li>Run <b>npm run serve</b></li>
+    </ol>
+    <br>
+    <div class="c-info__note">NOTE: the project uses LESS framework for CSS styles, that is compiled in runtime. If you run this website on the file system, it is highly recommended to use Google Chrome with flag <b>--disable-web-security</b>.
+    </div>
+  </article>
+
+  <article  class="c-info">
+    <h3 class="c-info__title">Build</h3>
+    <ol class="c-info__content">
+      <li>Run <b>serve</b> to start working with project (it is build html, open localhost and start you site)</li>
+      <li>Run <b>build</b> to compile you project like dist version (minified and uglified) in dist folder</li>
+      <li>Run <b>debug</b> to compile you project like debug version in dist folder</li>
+      <li>Run <b>html</b> to build htmls in app folder</li>
+    </ol>
+  </article>
+  <div class="c-info__note">NOTE: if you use a terminal for running task, type <b>npm run</b> before task name. Command should look like <b>npm run serve</b>, <b>npm run build</b>, etc..
+  </div>
+  <article  class="c-info">
+    <h3  class="c-info__title">Folder structure</h3>
+    <ul class="c-info__content">
+      <li><b>app</b> - contains static files (fonts, images, documents, swf etc.)
+        <ul>
+          <li><b>fonts</b> - </li>
+          <li><b>images</b> - </li>
+          <li><b>scripts</b> - contains all custom Javascript code</li>
+          <li>
+            <b>styles</b>
+            <ul>
+              <li><b>base</b> - a base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes. It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+                <ol>
+                  <li>includes a normalise/reset css
+                  </li>
+                  <li>default variables</li>
+                </ol>
+              </li>
+              <li><b>global</b> - similar to the base accept targets base classes and helpers that are reusable throughout the project (could potentially sit inside base):
+                <ol>
+                  <li>typography</li>
+                  <li>global helpers that are reusable</li>
+                  <li>mixins</li>
+                </ol>
+              </li>
+              <li><b>layout</b> - general layout elements of the page ie styling of headers/footers and major layout sections
+                <ol>
+                  <li>grid</li>
+                </ol>
+              </li>
+              <li><b>component</b> - a discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Components sit inside Layout components. Component can sometimes sit within other Components, too. Each Component should be designed to exist as a standalone component. In doing so, the page will be more flexible. If done right, Components can easily be moved to different parts of the layout without breaking.
+              </li>
+              <li><b>state</b> - a state is something that augments and overrides all other styles. For example, an accordion section may be in a collapsed or expanded state. A message may be in a success or error state. States are generally applied to the same element as a layout rule or applied to the same element as a base module class.</li>
+              <li><b>theme</b> - theme defines colours and images that give your application or site its look and feel. Separating the theme out into its own set of styles allows for those styles to be easily redefined for alternate themes.</li>
+            </ul>
+            <span class="c-info__note">(NOTE: default configuration of grunt file compiles to css main.less and pages styles only)</span>
+          </li>
+          <li><b>templates</b> - contain all html files you should work with
+            <ul>
+              <li><b>layouts</b></li>
+              <li><b>pages</b> - contains pages templates</li>
+              <li><b>partials</b> - contains the duplicated paces of html</li>
+            </ul>
+            <span class="c-info__note">(NOTE: don't change html files on the root of app folder - they generate by fly)</span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>dist</b> this folder contain release version of site
+      </li>
+      <li><b>test</b> - contains features for cucumber tests
+      </li>
+      <li><b>libs</b> - contains third-party components, managed by Bower</li>
+
+    </ul>
+  </article>
+</section>
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>
